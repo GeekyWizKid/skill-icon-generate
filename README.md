@@ -24,6 +24,8 @@ npm install
 node app.js
 ```
 4. Open `http://localhost:3000/` in your browser
+5. Select the icon you want to generate
+6. Copy the generated code and paste it into your GitHub profile
 
 ## Preview
 ![preview](https://i.imgur.com/oUnpZMT.jpg)
