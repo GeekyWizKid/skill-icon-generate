@@ -27,4 +27,4 @@ node app.js
 
 ## Preview
 ![preview](https://i.imgur.com/oUnpZMT.jpg)
-![preview](https://i.imgur.com/tLnXEau.jpg)
+![preview](https://i.imgur.com/k4Vdi9i.jpg)
