@@ -42,10 +42,10 @@ app.get('/', (req, res) => {
             </style>
         </head>
         <body>
-            <h1>我的技能</h1>
+            <h1>Skills</h1>
             <!-- 主题选择下拉菜单 -->
             <div>
-                <label for="themeSelect">选择主题:</label>
+                <label for="themeSelect">Theme:</label>
                 <select id="themeSelect" onchange="updateMarkdown(selectedSkills)">
                     <option value="light">Light</option>
                     <option value="dark">Dark</option>
