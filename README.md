@@ -23,7 +23,7 @@ npm install
 ```bash
 node app.js
 ```
-4. Open `index.html` in your browser
+4. Open `http://localhost:3000/` in your browser
 
 ## Preview
 ![preview](https://i.imgur.com/oUnpZMT.jpg)
