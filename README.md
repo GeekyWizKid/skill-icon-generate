@@ -24,3 +24,7 @@ npm install
 node app.js
 ```
 4. Open `index.html` in your browser
+
+## Preview
+![preview](https://i.imgur.com/oUnpZMT.jpg)
+![preview](https://i.imgur.com/tLnXEau.jpg)
