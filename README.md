@@ -12,3 +12,15 @@ This is a simple icon generator designed to create skill icons that you can past
 [skill-icons](https://github.com/tandpfun/skill-icons)
 
 Feel free to use it and provide feedback.
+
+## Usage
+1. Clone this repo
+2. Install dependencies
+```bash
+npm install
+```
+3. Run the script
+```bash
+node app.js
+```
+4. Open `index.html` in your browser
