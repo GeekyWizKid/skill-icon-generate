@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
             <div>
                 <label for="themeSelect">Theme:</label>
                 <select id="themeSelect" onchange="updateMarkdown(selectedSkills)">
-                    <option value="light">Light</option>
+                    <option value="light" selected>Light</option>
                     <option value="dark">Dark</option>
                 </select>
             </div>
@@ -55,6 +55,7 @@ app.get('/', (req, res) => {
             <div class="skills">
                 <!-- 遍历 icons 文件夹中的 svg 文件作为技能供选择-->
                 ${icons.map(icon => {
+            if(icon.includes('Dark')) return '';
             const skill = icon.replace('.svg', '').toLocaleLowerCase().replace(/-(light|dark)$/, '');
             return `<img class="skill-icon" src="icons/${icon}" alt="${skill}" onclick="toggleSkill('${skill}')">`;
         }).join('')}
@@ -85,6 +86,10 @@ app.get('/', (req, res) => {
             
                 // 将 Markdown 图标显示在页面上
                 document.getElementById('markdown-output').innerHTML = markdown;
+
+                document.querySelectorAll('img').forEach(img => {
+                    img.src = themeSelect == 'light' ? img.src.replace('Dark', 'Light') : img.src.replace('Light', 'Dark')
+                })
             }
             
         </script>
