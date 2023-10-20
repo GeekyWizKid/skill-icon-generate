@@ -25,4 +25,5 @@ jobs:
         git config --local user.name "GitHub Action"
         git add CONTRIBUTORS.md
         git commit -m "Update CONTRIBUTORS.md"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/GeekyWizKid/skill-icon-generate.git
         git push
