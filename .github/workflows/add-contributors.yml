@@ -1,0 +1,19 @@
+name: Add Contributors
+
+on:
+  push:
+    branches:
+      - main  # 或您的默认分支名
+
+jobs:
+  add-contributors:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Add contributors
+      uses: actions/contributors-adder@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
