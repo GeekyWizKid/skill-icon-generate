@@ -32,7 +32,10 @@ node app.js
 5. Select the icon you want to generate
 6. Copy the generated code and paste it into your GitHub profile
 
+## Contributors
 
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
 ## Preview
 ![preview](https://i.imgur.com/oUnpZMT.jpg)
 ![preview](https://i.imgur.com/k4Vdi9i.jpg)
