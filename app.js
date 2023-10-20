@@ -55,7 +55,7 @@ app.get('/', (req, res) => {
             <div class="skills">
                 <!-- 遍历 icons 文件夹中的 svg 文件作为技能供选择-->
                 ${icons.map(icon => {
-            if(icon.includes('Dark')) return '';
+            if (icon.includes('Dark')) return '';
             const skill = icon.replace('.svg', '').toLocaleLowerCase().replace(/-(light|dark)$/, '');
             return `<img class="skill-icon" src="icons/${icon}" alt="${skill}" onclick="toggleSkill('${skill}')">`;
         }).join('')}
@@ -63,7 +63,8 @@ app.get('/', (req, res) => {
 
             <!-- 用于显示 Markdown 图标的区域 -->
             <div id="markdown-output"></div>
-
+            <!-- Newly added copy button -->
+            <button id="copyButton">Copy Markdown</button>
             <script>
             // JavaScript 函数来切换技能状态并生成 Markdown 图标
             const selectedSkills = new Set();
@@ -91,7 +92,21 @@ app.get('/', (req, res) => {
                     img.src = themeSelect == 'light' ? img.src.replace('Dark', 'Light') : img.src.replace('Light', 'Dark')
                 })
             }
+
             
+            // Add this code at the bottom of your page
+                document.addEventListener('DOMContentLoaded', () => {
+                const copyButton = document.getElementById('copyButton');
+                copyButton.addEventListener('click', () => {
+                    const markdown = document.getElementById('markdown-output').innerText;
+                    navigator.clipboard.writeText(markdown).then(() => {
+                    alert('Markdown has been copied to clipboard');
+                    }).catch(err => {
+                    alert('Failed to copy');
+                    });
+                });
+                });
+
         </script>
         
 
