@@ -7,6 +7,23 @@
 ## 贡献者
 
 <!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/GeekyWizKid">
+            <img src="https://avatars.githubusercontent.com/u/133981481?v=4" width="100;" alt="GeekyWizKid"/>
+            <br />
+            <sub><b>温州程序员劝退师</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/AndreaGennaioli">
+            <img src="https://avatars.githubusercontent.com/u/63359650?v=4" width="100;" alt="AndreaGennaioli"/>
+            <br />
+            <sub><b>Andrea Gennaioli</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators,contributors -end -->
 
 欢迎使用 并反馈问题
