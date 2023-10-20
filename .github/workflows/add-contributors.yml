@@ -1,4 +1,4 @@
-name: Add Contributors
+name: Update Contributors
 
 on:
   push:
@@ -6,15 +6,21 @@ on:
       - main  # or your default branch name
 
 jobs:
-  add-contributors:
+  update-contributors:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Add contributors
-      uses: allcontributors/add-contributors@v1
-      with:
-        contributors: "user1,user2,user3"
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Generate Contributors List
+      run: |
+        git log --format='%aN <%aE>' | sort -u > CONTRIBUTORS.md
+
+    - name: Commit and Push
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add CONTRIBUTORS.md
+        git commit -m "Update CONTRIBUTORS.md"
+        git push
