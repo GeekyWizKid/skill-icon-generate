@@ -6,24 +6,11 @@ on:
       - main  # or your default branch name
 
 jobs:
-  update-contributors:
+  contrib-readme-en-job:
     runs-on: ubuntu-latest
-
+    name: A job to automate contrib in readme
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-          persist-credentials: false
-
-    - name: Generate Contributors List
-      run: |
-        git log --format='%aN <%aE>' | sort -u > CONTRIBUTORS.md
-
-    - name: Commit and Push
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add CONTRIBUTORS.md
-        git commit -m "Update CONTRIBUTORS.md"
-        git remote set-url origin https://x-access-token:${{ secrets.MY_PERSONAL_TOKEN }}@github.com/GeekyWizKid/skill-icon-generate.git
-        git push
+      - name: Contribute List
+        uses: actions/checkout@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_PERSONAL_TOKEN }}
